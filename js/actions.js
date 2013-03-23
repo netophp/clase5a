@@ -2,6 +2,7 @@
 $(document).ready(function(e) {
     document.addEventListener("deviceready",function(){
 		//Brújula
+		watchID = null;
 		$('#bInc').tap(function(){
 		 watchID = navigator.compass.watchHeading(function (heading) {
 			$('#bRes').text(heading.magneticHeading);
